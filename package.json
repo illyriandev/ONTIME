@@ -1,0 +1,23 @@
+{
+  "name": "ontime",
+  "version": "1.0.0",
+  "description": "My first own website",
+  "main": "index.js",
+  "homepage": "https://undefineddeveloper.github.io/ON-TIME",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "deploy": "gh-pages -d ontime"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/UnDefinedDEVELOPER/ON-TIME-to-do-app.git"
+  },
+  "author": "Muhammed Halilović",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/UnDefinedDEVELOPER/ON-TIME-to-do-app/issues"
+  }, 
+  "dependencies": {
+    "gh-pages": "^2.0.1"
+  }
+}

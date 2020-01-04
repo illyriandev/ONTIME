@@ -1,0 +1,326 @@
+/* latin-ext */
+@font-face {
+  font-family: 'Mogra';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Mogra Regular'), local('Mogra-Regular'), url(https://fonts.gstatic.com/s/mogra/v4/f0X40eSs8c95TCoxBPPWxg.woff2) format('woff2');
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Mogra';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Mogra Regular'), local('Mogra-Regular'), url(https://fonts.gstatic.com/s/mogra/v4/f0X40eSs8c95TCo_BPM.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #000;
+  font-size: 16px;
+  background: #961B35;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.container {
+  width: 85%;
+  height: auto;
+  margin: 0 auto;
+  background: #fff;
+  border: #000 2px solid;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
+
+/* Header Section */
+
+header img {
+  max-width: 100%;
+  min-width: auto;
+  height: auto;
+}
+
+header nav {
+  position: absolute;
+  top: 50px;
+  left: 150px;
+}
+
+header nav ul {
+  list-style-type: none;
+}
+
+header nav ul li {
+  display: inline;
+  text-decoration: none;
+  background: #961B35;
+  padding: 15px;
+}
+
+header nav ul a li:hover  {
+  background: rgb(95, 0, 21)
+}
+
+header nav ul li.current_link {
+  background: rgb(95, 0, 21);
+}
+
+header nav ul a {
+  text-decoration: none;
+}
+
+header nav ul a li {
+  color: #fff;
+  font-size: 23px;
+}
+
+
+
+/* Showcase section  */
+
+
+.showcase{
+  padding-top: 20px;
+  margin-top: 20px;
+  padding-bottom: 30px;
+}
+
+
+.showcase h1 {
+  font-size: 46px;
+  font-family: 'Mogra', cursive;
+  text-align: center;
+}
+
+.showcase h1 span {
+  background: #961B35;
+  color: #fff;
+  margin: 0 10px;
+  padding: 10px;
+  font-size: 40px;
+}
+
+.showcase h2.quote {
+  margin-top: 50px;
+  font-size: 34px;
+  font-style: oblique;
+  font-weight: 200;
+  text-align: center;
+}
+
+/* Button Section */
+
+.plan_img img {
+  float: right;
+  max-width: 100%;
+  height: 100%;
+  border: #000 2px solid;
+}
+
+.button {
+  background: #000;
+}
+
+
+
+#button {
+  text-align: center;
+  padding: 190px 0;
+  position: relative;
+  z-index: 1;
+}
+
+#button .button-bg {
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: url("../img/computer-desk-electronics-374074.jpg");
+  opacity: 0.6;
+  width: 100%;
+  height: 100%;
+}
+
+#button h2 {
+  font-size: 40px;
+  font-weight: bold;
+  color: #fff;
+  line-height: 5rem;
+  text-shadow: 2px 2px #961B35;
+}
+
+#button button {
+  border: none;
+  width: auto;
+  height: auto;
+  padding: 15px;
+  background: #961B35;
+  color: #fff;
+  font-size: 35px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+#button h5 {
+  color: #fff;
+  font-size: 16px;
+}
+
+/* Footer Section */
+
+footer {
+  margin-top: 40px;
+  background: #1a1a1a;
+  color: #fff;
+  overflow: hidden;
+}
+
+footer .container {
+  padding: 50px;
+  border: none;
+  background: none;
+}
+
+footer h1 {
+  font-size: 35px;
+}
+
+
+footer h2#copy-name {
+  float: right;
+  font-size: 35px;
+}
+
+/* Navigation media query */
+
+@media only screen and (max-width: 1700px) {
+  header nav {
+    display: none;
+  }
+}
+
+/* Button Section Images Media Query */
+
+@media only screen and (max-width: 1200px) {
+
+  .container {
+    border: none;
+  }
+
+  .grid-container {
+    display: block;
+    grid-template-columns: none;
+  }
+
+  #button {
+    background: #000;
+  }
+
+  #button .button-bg {
+    background-repeat: no-repeat;
+    min-width: 100%;
+  }
+
+  .plan_img {
+    margin-top: 50px;
+  }
+
+  .plan_img img {
+    float: none;
+    min-width: 100%;
+    height: auto;
+    border: none;
+  }
+
+  .button {
+    background: none;
+  }
+
+  .footer {
+    text-align: center;
+  }
+
+  footer h2#copy-name {
+    float: none;
+    font-size: 35px;
+  }
+  
+
+}
+
+/* Container Media Query */
+
+@media only screen and (max-width: 800px) {
+  header {
+    padding-top: 20px;
+  }
+
+  .container {
+    width: 100%;
+  }
+
+  .showcase h1 {
+    line-height: 70px;
+    font-size: 35px;
+  }
+
+  .showcase h1 span {
+    font-size: 35px;
+  }
+}
+
+/* SM Devices Media Query */
+
+@media only screen and (max-width: 342px) {
+  .showcase h1 {
+    line-height: 50px;
+    font-size: 25px;
+  }
+
+  .showcase h1 span {
+    font-size: 25px;
+  }
+
+  .button {
+    height: auto;
+  }
+
+
+
+  footer h1 {
+    font-size: 24px;
+  }
+
+  footer h2#copy-name {
+    font-size: 16px;
+  }
+
+}
+
+@media only screen and (max-width: 380px) {
+
+  #button h2 {
+    font-size: 30px;
+    line-height: 3rem;
+  }
+  
+  #button h2 button {
+    font-size: 30px;
+  }
+}
+
+

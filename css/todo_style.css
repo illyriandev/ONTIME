@@ -1,0 +1,299 @@
+/* 
+  I wanted to use the same css file to style the 'todo.html' but I realized that I had some mistakes, or better to say
+  crappy code so I just wanted to this as simplier as I can :D (Also this is my 1st project so it's not that bad)
+*/
+
+/* Importing Mogra font-family */
+/* latin-ext */
+@font-face {
+  font-family: 'Mogra';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Mogra Regular'), local('Mogra-Regular'), url(https://fonts.gstatic.com/s/mogra/v4/f0X40eSs8c95TCoxBPPWxg.woff2) format('woff2');
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Mogra';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Mogra Regular'), local('Mogra-Regular'), url(https://fonts.gstatic.com/s/mogra/v4/f0X40eSs8c95TCo_BPM.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #000;
+  font-size: 16px;
+  background: rgb(110, 110, 110);
+}
+
+.content-bg {
+  background: #fff;
+  height: 100%;
+  /*margin: auto;
+  margin: 4rem;
+  padding: 4rem;*/
+}
+
+header img {
+  width: 70%;
+  height: 70%;
+}
+
+header nav {
+  float: right;
+  padding: 100px 50px 0 0;
+}
+
+header nav ul {
+  list-style-type: none;
+}
+
+header nav ul li {
+  display: inline;
+  text-decoration: none;
+  background: #961B35;
+  padding: 1.2rem;
+  text-justify: center;
+}
+
+header nav ul li:hover  {
+  background: rgb(95, 0, 21)
+}
+
+header nav ul li.current_link {
+  background: rgb(95, 0, 21);
+}
+
+header nav ul li a {
+  text-decoration: none;
+}
+
+header nav ul li a {
+  color: #fff;
+  font-size: 1.45rem;
+}
+
+main {
+  margin: 50px 0;
+  width: 100%;
+}
+
+main .input {
+  position: relative;
+  height: 64px;
+  width: 48%;
+  padding: 7px;
+  z-index: 5;
+  /* border: 2px solid #961B35; */
+  border-radius: 5px;
+  background: #961B35;
+  box-sizing: border-box;
+}
+
+main .input input {
+  width: 100%;
+  height: 50px;
+  float: left;
+  text-indent: 10px;
+  padding-right: 60px;
+  font-size: 1.75rem;
+  border: none;
+  box-shadow: none;
+  outline: none;
+  color: #fff;
+  background: rgb(207, 37, 74);
+  border-radius: 5px;
+  border-top-right-radius: 25px;
+  border-bottom-right-radius: 25px;
+
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  -o-appearance: none;
+  appearance: none;  
+}
+
+main .input input::-webkit-input-placeholder {
+  color: #fff;
+}
+
+main .input #addItem {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  top: 7px;
+  right: 7px;
+  z-index: 2;
+  border-radius: 25px;
+  background: #fff;
+  border: 0;
+  box-shadow: none;
+  outline: none;
+  cursor: pointer;
+
+
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  -o-appearance: none;
+  appearance: none;  
+} 
+
+main .input #addItem svg {
+  width: 16px;
+  height: 16px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -8px 0 0 -8px;
+}
+
+main .input #addItem svg .fill{
+  fill: #961B35;
+}
+
+main .todo-list {
+  width: 48%;  
+  margin: auto;
+  font-size: 1.25rem;
+  border: 2px solid #7e7e7e;
+  border-radius: 5px;
+  margin-top: 6rem;
+  float: right;
+}
+main .todo-list h1,   main .todo-list h3{
+  text-align: center;
+}
+
+main .todo-list ul {
+  padding-inline-start: 0px;
+  width: 100%;
+  float: left;
+  list-style-type: none;
+  font-size: 2rem;
+  padding: 20px;
+}
+
+main .todo-list ul li {
+  width: 100%;
+  float: left;
+  background: #fff;
+  border-radius: 5px;
+  position: relative;
+  box-shadow: 0px 1px 2px rgba(44, 62, 80, 0.10);
+  margin: 10px 0 10px 0;
+  padding: 10px;
+  word-wrap: break-word;
+  border: #000 2px solid;
+}
+
+main .todo-list ul li button{
+  width: 50px;
+  height: 50px;
+  float: right;
+}
+
+main .todo-list ul li .buttons .remove{
+  background-image: url("../img/trash-alt-solid.svg");
+}
+
+#side-img {
+  width: 48%;
+}
+
+#side-img img {
+  width: 100%;
+  border: 2px solid #7e7e7e;
+  border-radius: 5px;
+}
+
+footer {
+  color: #fff;
+  padding: 2rem;
+  font-size: 1.5rem
+}
+
+@media only screen and (max-width: 1280px){
+  main .input {
+    width: 100%;
+  }
+
+  main .todo-list{
+    margin-top: 1rem;
+    width: 100%;
+    float: none;    
+  }
+
+
+  #side-img {
+    width: 100%;
+  }
+} 
+
+@media only screen and (max-width: 940px){
+  header img{
+    width: 55%;
+    height: 55%;
+    
+  }
+
+  header nav {
+    float: none;
+    padding: 0 0 0 0;
+  }
+
+  header nav ul {
+    padding-inline-start: 0px;
+  }
+
+  header nav ul li {
+    display: block;
+    text-align: center;
+    padding: 10px 0 10px 0;
+  }
+
+  main {
+    margin: 30px 0;
+  }
+}
+
+@media only screen and (max-width: 700px){
+  .content-bg{
+    margin: 0 2rem 2rem 2rem;
+    padding: 1rem 2rem 2rem 2rem;
+  }
+
+  header img{
+    width: 80%;
+    height: 80%;
+    
+  }
+}
+
+@media only screen and (max-width: 500px){
+  html, body{
+    font-size: 0.85rem;
+  }
+
+  .content-bg{
+    margin: 0 1rem 1rem 1rem;
+    padding: 0.5rem 1rem 1rem 1rem;
+  }
+
+  header img{
+    width: 100%;
+    height: 100%;   
+  }
+
+  .todo-list {
+    font-size: 0.85rem;
+  }
+}
+
